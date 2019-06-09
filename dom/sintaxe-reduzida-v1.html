@@ -1,19 +1,21 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <div id="app">
-  <p>{{ titulo }}</p>
-  <p>{{ saudacao() }}</p>
+  <p>{{ contador }}</p>
+  <button @click="somar"> soma 1</button>
+  <hr>
+  <input :value="contador">
 </div>
 
 <script>
     new Vue ({
         el:'#app' ,
         data: {
-            titulo: 'Usando VueJS'
+            contador: 0
         },
         methods: {
-            saudacao: function() {
-                return 'Boa semana!'
+            somar() {
+                this.contador++
             }
         }
     })

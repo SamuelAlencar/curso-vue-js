@@ -9,7 +9,7 @@
         <span v-on:mousemove.stop.prevent>PARAR AQUI!!!</span>
    </p>
    <a v-on:click.prevent="naoNavegar" href="https://www.google.com.br">Google</a>
-   <input type="text" v-on:keyup.enter.alt="exibirAlerta" >
+   <input type="text" v-on:keyup.enter.a="exibirAlerta" >
 </div>
 
 <script>
@@ -34,7 +34,7 @@
             },
             exibirAlerta() {
                 alert('Estou de Alertando')
-            },
+            }
             // parar(e) {
             //     e.stopPropagation()
             // }
